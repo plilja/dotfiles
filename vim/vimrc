@@ -1,0 +1,23 @@
+" Plugin manager
+execute pathogen#infect() 
+
+set t_Co=256 " 256 color terminal
+
+syntax on
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set number
+set relativenumber
+colorscheme wombat256mod
+filetype indent plugin on
+
+nnoremap ; :
+imap jj <Esc>
+
+
+set clipboard=unnamed " Os x clipboard when yanking
+
+noremap Q <NOP> " Disable Ex mode
+
+set ignorecase " case insensitive searching
