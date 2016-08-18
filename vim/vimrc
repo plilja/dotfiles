@@ -1,5 +1,9 @@
-" Plugin manager
-execute pathogen#infect() 
+call plug#begin('~/.vim/plugged')
+
+Plug 'valloric/youcompleteme'
+Plug 'vim-scripts/wombat256.vim'
+
+call plug#end() 
 
 set t_Co=256 " 256 color terminal
 
