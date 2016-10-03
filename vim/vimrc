@@ -4,6 +4,10 @@ Plug 'valloric/youcompleteme'
 Plug 'vim-scripts/wombat256.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'easymotion/vim-easymotion'
+Plug 'ervandew/supertab'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'wincent/command-t'
 
 call plug#end() 
 
@@ -21,6 +25,7 @@ filetype indent plugin on
 nnoremap ; :
 imap jj <Esc>
 
+let mapleader="," 
 
 set clipboard=unnamed " Os x clipboard when yanking
 
@@ -38,3 +43,15 @@ set backspace=indent,eol,start
 
 " Single leader key press to trigger easymotion
 map <Leader> <Plug>(easymotion-prefix)
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:ycm_confirm_extra_conf = 0 " Load settings files for youcompleteme without prompting
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
