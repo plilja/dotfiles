@@ -8,6 +8,7 @@ Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'wincent/command-t'
+Plug 'scrooloose/nerdtree'
 
 call plug#end() 
 
@@ -41,9 +42,6 @@ nnoremap <C-H> <C-W><C-H>
 
 set backspace=indent,eol,start
 
-" Single leader key press to trigger easymotion
-map <Leader> <Plug>(easymotion-prefix)
-
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -55,3 +53,7 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+" Open Nerdtree with ctrl-n
+map <C-n> :NERDTreeToggle<CR>
+" Close vim if only nerdtree is open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
