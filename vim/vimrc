@@ -28,7 +28,7 @@ filetype indent plugin on
 nnoremap ; :
 imap jj <Esc>
 
-let mapleader=" " 
+let mapleader = "\<Space>"
 
 set clipboard=unnamed " Os x clipboard when yanking
 
