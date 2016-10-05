@@ -44,8 +44,8 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <cr> :noh<cr> " Escape from search highlighting
-nnoremap <tab> ` " Jump to matching brace
-vnoremap <tab> `
+nnoremap ` %
+vnoremap ` %
 
 " Move between splits with ctrl+hjkl (i.e no w)
 nnoremap <C-J> <C-W><C-J>
