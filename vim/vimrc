@@ -34,7 +34,18 @@ set clipboard=unnamed " Os x clipboard when yanking
 
 noremap Q <NOP> " Disable Ex mode
 
-set ignorecase " case insensitive searching
+" Search settings 
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <cr> :noh<cr> " Escape from search highlighting
+nnoremap <tab> ` " Jump to matching brace
+vnoremap <tab> `
 
 " Move between splits with ctrl+hjkl (i.e no w)
 nnoremap <C-J> <C-W><C-J>
