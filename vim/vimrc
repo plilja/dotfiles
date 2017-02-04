@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'valloric/youcompleteme'
-Plug 'vim-scripts/wombat256.vim'
+Plug 'plilja/wombat256.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
@@ -9,6 +9,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'wincent/command-t'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+"Plug 'scrooloose/syntastic'
 
 call plug#end() 
 
@@ -72,8 +74,15 @@ let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Open Nerdtree with ctrl-n
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<cr>
 " Close vim if only nerdtree is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 set completeopt-=preview
+
+" Managing editor tabs
+nnoremap tn :tabnew<Space>
+nnoremap tk :tabnext<cr>
+nnoremap tj :tabprev<cr>
+nnoremap th :tabfirst<cr>
+nnoremap tl :tablast<cr>
