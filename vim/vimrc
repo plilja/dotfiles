@@ -10,6 +10,7 @@ Plug 'honza/vim-snippets'
 Plug 'wincent/command-t'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
+Plug 'chaoren/vim-wordmotion'
 "Plug 'scrooloose/syntastic'
 
 call plug#end() 
@@ -86,3 +87,7 @@ nnoremap tk :tabnext<cr>
 nnoremap tj :tabprev<cr>
 nnoremap th :tabfirst<cr>
 nnoremap tl :tablast<cr>
+
+" Leader toggles camel case navigation
+let g:wordmotion_prefix = '<Leader>'
+
