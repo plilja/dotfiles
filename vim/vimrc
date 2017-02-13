@@ -11,6 +11,7 @@ Plug 'wincent/command-t'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'chaoren/vim-wordmotion'
+Plug 'mileszs/ack.vim'
 "Plug 'scrooloose/syntastic'
 
 call plug#end() 
