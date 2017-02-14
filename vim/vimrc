@@ -92,3 +92,8 @@ nnoremap tl :tablast<cr>
 " Leader toggles camel case navigation
 let g:wordmotion_prefix = '<Leader>'
 
+" Use silver searcher for Ack if it is available
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+nnoremap <Leader>a :Ack<Space>
