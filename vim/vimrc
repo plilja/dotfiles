@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'valloric/youcompleteme'
-Plug 'plilja/wombat256.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
@@ -12,6 +11,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'chaoren/vim-wordmotion'
 Plug 'mileszs/ack.vim'
+Plug 'morhetz/gruvbox'
 "Plug 'scrooloose/syntastic'
 
 call plug#end() 
@@ -26,7 +26,10 @@ set softtabstop=4
 set autoindent
 set number
 set relativenumber
-colorscheme wombat256mod
+
+set termguicolors
+set background=dark
+colorscheme gruvbox
 filetype indent plugin on
 
 " Switch colon and semicolon
