@@ -12,6 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'chaoren/vim-wordmotion'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
+Plug 'plilja/wombat256.vim'
 "Plug 'scrooloose/syntastic'
 
 call plug#end() 
@@ -58,6 +59,14 @@ set hlsearch
 nnoremap <cr> :noh<cr> " Escape from search highlighting
 nnoremap ` %
 vnoremap ` %
+
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
+
+" $/^ doesn't do anything
+nnoremap $ <nop>
+nnoremap ^ <nop>
 
 " Move between splits with ctrl+hjkl (i.e no w)
 nnoremap <C-J> <C-W><C-J>
