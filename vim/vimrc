@@ -1,4 +1,4 @@
-cacommand-tll plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " Plug 'valloric/youcompleteme'
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
