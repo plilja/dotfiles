@@ -1,12 +1,12 @@
-call plug#begin('~/.vim/plugged')
+cacommand-tll plug#begin('~/.vim/plugged')
 
-Plug 'valloric/youcompleteme'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+" Plug 'valloric/youcompleteme'
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'wincent/command-t'
+Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'chaoren/vim-wordmotion'
