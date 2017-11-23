@@ -112,3 +112,6 @@ nnoremap <Leader>a :Ack<Space>
 
 " Auto save whenever text is changed
 autocmd TextChanged,TextChangedI <buffer> silent write
+
+" Store temp .swp-files in .vim/tmp under home folder
+set directory^=$HOME/.vim/swps//
