@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
-" Plug 'valloric/youcompleteme'
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'valloric/youcompleteme'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
@@ -26,7 +26,6 @@ set tabstop=4
 set softtabstop=4
 set autoindent
 set number
-set relativenumber
 
 set termguicolors
 set background=dark
