@@ -114,3 +114,7 @@ autocmd TextChanged,TextChangedI <buffer> silent write
 
 " Store temp .swp-files in .vim/tmp under home folder
 set directory^=$HOME/.vim/swps//
+
+" Fast buffer switching 
+nnoremap <Leader>n :bnext<CR>:redraw<CR>:ls<CR>
+nnoremap <Leader>p :bprevious<CR>:redraw<CR>:ls<CR>
