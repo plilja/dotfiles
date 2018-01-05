@@ -121,3 +121,6 @@ nnoremap <Leader>p :bprevious<CR>:redraw<CR>:ls<CR>
 
 let g:ctrlp_map = '<c-t>'
 let g:ctrlp_cmd = 'CtrlP'
+
+vnoremap < <gv
+vnoremap > >gv
