@@ -116,8 +116,8 @@ autocmd TextChanged,TextChangedI <buffer> silent write
 set directory^=$HOME/.vim/swps//
 
 " Fast buffer switching 
-nnoremap <Leader>n :bnext<CR>:redraw<CR>:ls<CR>
-nnoremap <Leader>p :bprevious<CR>:redraw<CR>:ls<CR>
+nnoremap <Leader>n :bnext<CR>
+nnoremap <Leader>p :bprevious<CR>
 
 let g:ctrlp_map = '<c-t>'
 let g:ctrlp_cmd = 'CtrlP'
