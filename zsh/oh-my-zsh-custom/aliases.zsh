@@ -6,5 +6,5 @@ alias vimdiff='mvim -v -d'
 alias h++='clang++ -O2 -std=c++11'
 
 function lb() {
-    vim ~/Dropbox/logbook/$(date '+%Y-%m-%d').md
+    vim ~/logbook/$(date '+%Y-%m-%d').md
 }
