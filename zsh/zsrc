@@ -3,13 +3,14 @@ export ZSH=/Users/patrik/.oh-my-zsh
 
 export EDITOR='mvim -v -f --nomru -c "au VimLeave * !open -a iTerm"' 
 export GIT_EDITOR='mvim -v -f --nomru -c "au VimLeave * !open -a iTerm"'
+export GPG_TTY=$(tty)
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="bira"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="pygmalion"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 # Uncomment the following line to use case-sensitive completion.
@@ -54,7 +55,7 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z osx)
+plugins=(git z osx gpg-agent)
 
 # User configuration
 
