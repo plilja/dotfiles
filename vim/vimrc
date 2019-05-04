@@ -12,12 +12,13 @@ Plug 'tpope/vim-surround'
 Plug 'chaoren/vim-wordmotion'
 Plug 'mileszs/ack.vim'
 Plug 'morhetz/gruvbox'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
-"Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
+Plug 'majutsushi/tagbar'
 
 call plug#end() 
 
-set t_Co=256 " 256 color terminal
 
 syntax on
 set expandtab
@@ -43,6 +44,8 @@ imap jj <Esc>
 let mapleader = "\<Space>"
 
 set clipboard=unnamed " Os x clipboard when yanking
+" Auto save whenever text is changed
+autocmd TextChanged,TextChangedI <buffer> silent write
 
 noremap Q <NOP> " Disable Ex mode
 
@@ -75,21 +78,6 @@ nnoremap <C-H> <C-W><C-H>
 
 set backspace=indent,eol,start
 
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-let g:ycm_confirm_extra_conf = 0 " Load settings files for youcompleteme without prompting
-
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-" Open Nerdtree with ctrl-n
-nnoremap <C-n> :NERDTreeToggle<cr>
-" Close vim if only nerdtree is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 set completeopt-=preview
 
@@ -100,31 +88,66 @@ nnoremap tj :tabprev<cr>
 nnoremap th :tabfirst<cr>
 nnoremap tl :tablast<cr>
 
-" Leader toggles camel case navigation
-let g:wordmotion_prefix = '<Leader>'
-
-" Use silver searcher for Ack if it is available
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-nnoremap <Leader>a :Ack<Space>
 
 " Auto save whenever text is changed
-autocmd TextChanged,TextChangedI <buffer> silent write
-
-" Store temp .swp-files in .vim/tmp under home folder
-set directory^=$HOME/.vim/swps//
+" autocmd TextChanged,TextChangedI <buffer> silent write
 
 " Fast buffer switching 
 nnoremap <Leader>n :bnext<CR>
 nnoremap <Leader>p :bprevious<CR>
 
-let g:ctrlp_map = '<c-t>'
-let g:ctrlp_cmd = 'CtrlP'
-
 vnoremap < <gv
 vnoremap > >gv
 
-" Ctrl p 
-let g:ctrlp_map = '<c-t>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:python_host_prog = '/Users/patrik/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/Users/patrik/.pyenv/versions/neovim3/bin/python'
+let g:neomake_python_enabled_makers = ['flake8']
+let g:neomake_python_flake8_maker = {'exe': $PYENV_ROOT . '/Users/patrik/.pyenv/versions/neovim3/bin/flake8'}
+
+
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+imap jj <Esc>
+
+let mapleader = "\<Space>"
+
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+imap jj <Esc>
+
+let mapleader = "\<Space>"
+
+map Y y$
+
+nnoremap ; :
+nnoremap : ;
+vnoremap ; :
+vnoremap : ;
+
+imap jj <Esc>
+
+let mapleader = "\<Space>"
+
+" Os x clipboard when yanking
+set clipboard=unnamed 
+
+let g:tagbar_autofocus = 1
+nnoremap <C-m> :TagbarToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+" Multi cursor key mappings
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = '<C-s>'
+let g:multi_cursor_select_all_word_key = '<A-s>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-s>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
