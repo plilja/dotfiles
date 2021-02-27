@@ -99,7 +99,7 @@ nnoremap tl :tablast<cr>
 
 " Fast buffer switching 
 nnoremap <Leader>n :bnext<CR>
-nnoremap <Leader>p :bprevious<CR>
+nnoremap <Leader>b :bprevious<CR>
 
 vnoremap < <gv
 vnoremap > >gv
