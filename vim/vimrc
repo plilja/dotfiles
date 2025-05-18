@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'valloric/youcompleteme'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+"Plug 'valloric/youcompleteme'
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'SirVer/ultisnips'
@@ -18,7 +18,6 @@ Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
 
 call plug#end() 
-
 
 syntax on
 set expandtab
@@ -45,7 +44,7 @@ let mapleader = "\<Space>"
 
 set clipboard=unnamed " Os x clipboard when yanking
 " Auto save whenever text is changed
-autocmd TextChanged,TextChangedI <buffer> silent write
+" autocmd TextChanged,TextChangedI <buffer> silent write
 
 noremap Q <NOP> " Disable Ex mode
 
@@ -83,7 +82,6 @@ nnoremap <C-H> <C-W><C-H>
 
 set backspace=indent,eol,start
 
-
 set completeopt-=preview
 
 " Managing editor tabs
@@ -92,7 +90,6 @@ nnoremap tk :tabnext<cr>
 nnoremap tj :tabprev<cr>
 nnoremap th :tabfirst<cr>
 nnoremap tl :tablast<cr>
-
 
 " Auto save whenever text is changed
 " autocmd TextChanged,TextChangedI <buffer> silent write
@@ -104,11 +101,9 @@ nnoremap <Leader>b :bprevious<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-let g:python_host_prog = '/Users/patrik/.pyenv/versions/neovim2/bin/python'
-let g:python3_host_prog = '/Users/patrik/.pyenv/versions/neovim3/bin/python'
-let g:neomake_python_enabled_makers = ['flake8']
-let g:neomake_python_flake8_maker = {'exe': $PYENV_ROOT . '/Users/patrik/.pyenv/versions/neovim3/bin/flake8'}
-
+let g:python3_host_prog = '/usr/bin/python3'
+"let g:neomake_python_enabled_makers = ['flake8']
+"let g:neomake_python_flake8_maker = {'exe': $PYENV_ROOT . '/Users/patrik/.pyenv/versions/neovim3/bin/flake8'}
 
 nnoremap ; :
 nnoremap : ;
@@ -129,18 +124,6 @@ imap jj <Esc>
 let mapleader = "\<Space>"
 
 map Y y$
-
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
-
-imap jj <Esc>
-
-let mapleader = "\<Space>"
-
-" Os x clipboard when yanking
-set clipboard=unnamed 
 
 let g:tagbar_autofocus = 1
 nnoremap <C-m> :TagbarToggle<CR>
